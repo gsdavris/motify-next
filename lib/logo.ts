@@ -1,0 +1,1 @@
+export const LOGO_DOCK_SCROLL_THRESHOLD = 160;

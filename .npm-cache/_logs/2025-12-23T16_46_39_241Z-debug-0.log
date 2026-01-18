@@ -1,0 +1,367 @@
+0 verbose cli /Users/gdavris/.nvm/versions/node/v20.19.5/bin/node /Users/gdavris/.nvm/versions/node/v20.19.5/bin/npm
+1 info using npm@10.8.2
+2 info using node@v20.19.5
+3 silly config load:file:/Users/gdavris/.nvm/versions/node/v20.19.5/lib/node_modules/npm/npmrc
+4 silly config load:file:/Users/gdavris/motify-next/.npmrc
+5 silly config load:file:/Users/gdavris/.npmrc
+6 silly config load:file:/Users/gdavris/.nvm/versions/node/v20.19.5/etc/npmrc
+7 verbose title npm install @apollo/client
+8 verbose argv "install" "@apollo/client" "--cache" "./.npm-cache"
+9 verbose logfile logs-max:10 dir:/Users/gdavris/motify-next/.npm-cache/_logs/2025-12-23T16_46_39_241Z-
+10 verbose logfile /Users/gdavris/motify-next/.npm-cache/_logs/2025-12-23T16_46_39_241Z-debug-0.log
+11 silly packumentCache heap:4345298944 maxSize:1086324736 maxEntrySize:543162368
+12 silly logfile done cleaning log files
+13 silly idealTree buildDeps
+14 silly fetch manifest @apollo/client@^3.14.0
+15 silly packumentCache full:https://registry.npmjs.org/@apollo%2fclient cache-miss
+16 verbose shrinkwrap failed to load node_modules/.package-lock.json out of date, updated: node_modules
+17 http fetch GET 200 https://registry.npmjs.org/@apollo%2fclient 1119ms (cache revalidated)
+18 silly packumentCache full:https://registry.npmjs.org/@apollo%2fclient set size:3421186 disposed:false
+19 silly fetch manifest graphql@^15.0.0 || ^16.0.0
+20 silly packumentCache full:https://registry.npmjs.org/graphql cache-miss
+21 http fetch GET 200 https://registry.npmjs.org/graphql 623ms (cache revalidated)
+22 silly packumentCache full:https://registry.npmjs.org/graphql set size:800855 disposed:false
+23 silly fetch manifest graphql-ws@^5.5.5 || ^6.0.3
+24 silly packumentCache full:https://registry.npmjs.org/graphql-ws cache-miss
+25 http fetch GET 200 https://registry.npmjs.org/graphql-ws 252ms (cache revalidated)
+26 silly packumentCache full:https://registry.npmjs.org/graphql-ws set size:717934 disposed:false
+27 silly fetch manifest @fastify/websocket@^10 || ^11
+28 silly packumentCache full:https://registry.npmjs.org/@fastify%2fwebsocket cache-miss
+29 http fetch GET 200 https://registry.npmjs.org/@fastify%2fwebsocket 1365ms (cache revalidated)
+30 silly packumentCache full:https://registry.npmjs.org/@fastify%2fwebsocket set size:104664 disposed:false
+31 silly fetch manifest crossws@~0.3
+32 silly packumentCache full:https://registry.npmjs.org/crossws cache-miss
+33 http fetch GET 200 https://registry.npmjs.org/crossws 267ms (cache revalidated)
+34 silly packumentCache full:https://registry.npmjs.org/crossws set size:73981 disposed:false
+35 silly fetch manifest uWebSockets.js@^20
+36 silly packumentCache full:https://registry.npmjs.org/uWebSockets.js cache-miss
+37 http fetch GET 404 https://registry.npmjs.org/uWebSockets.js 269ms (cache skip)
+38 silly fetch manifest ws@^8
+39 silly packumentCache full:https://registry.npmjs.org/ws cache-miss
+40 http fetch GET 200 https://registry.npmjs.org/ws 56ms (cache revalidated)
+41 silly packumentCache full:https://registry.npmjs.org/ws set size:410901 disposed:false
+42 silly fetch manifest bufferutil@^4.0.1
+43 silly packumentCache full:https://registry.npmjs.org/bufferutil cache-miss
+44 http fetch GET 200 https://registry.npmjs.org/bufferutil 57ms (cache revalidated)
+45 silly packumentCache full:https://registry.npmjs.org/bufferutil set size:52763 disposed:false
+46 silly fetch manifest utf-8-validate@>=5.0.2
+47 silly packumentCache full:https://registry.npmjs.org/utf-8-validate cache-miss
+48 http fetch GET 200 https://registry.npmjs.org/utf-8-validate 61ms (cache revalidated)
+49 silly packumentCache full:https://registry.npmjs.org/utf-8-validate set size:77148 disposed:false
+50 silly fetch manifest react@19.2.0
+51 silly packumentCache full:https://registry.npmjs.org/react cache-miss
+52 http fetch GET 200 https://registry.npmjs.org/react 15ms (cache hit)
+53 silly packumentCache full:https://registry.npmjs.org/react set size:6362607 disposed:false
+54 silly fetch manifest react-dom@19.2.0
+55 silly packumentCache full:https://registry.npmjs.org/react-dom cache-miss
+56 http fetch GET 200 https://registry.npmjs.org/react-dom 11ms (cache hit)
+57 silly packumentCache full:https://registry.npmjs.org/react-dom set size:8375290 disposed:false
+58 silly fetch manifest subscriptions-transport-ws@^0.9.0 || ^0.11.0
+59 silly packumentCache full:https://registry.npmjs.org/subscriptions-transport-ws cache-miss
+60 http fetch GET 200 https://registry.npmjs.org/subscriptions-transport-ws 268ms (cache revalidated)
+61 silly packumentCache full:https://registry.npmjs.org/subscriptions-transport-ws set size:245499 disposed:false
+62 silly placeDep ROOT @apollo/client@3.14.0 REPLACE for: motify-next@0.1.0 want: ^3.14.0
+63 silly reify mark retired [ '/Users/gdavris/motify-next/node_modules/eslint-config-next' ]
+64 silly reify mark retired [ '/Users/gdavris/motify-next/node_modules/fastq' ]
+65 silly reify mark retired [ '/Users/gdavris/motify-next/node_modules/graphql' ]
+66 silly reify mark retired [ '/Users/gdavris/motify-next/node_modules/graphql-tag' ]
+67 silly reify mark retired [ '/Users/gdavris/motify-next/node_modules/hoist-non-react-statics' ]
+68 silly reify mark retired [ '/Users/gdavris/motify-next/node_modules/lightningcss-darwin-x64' ]
+69 silly reify mark retired [ '/Users/gdavris/motify-next/node_modules/lightningcss-freebsd-x64' ]
+70 silly reify mark retired [
+70 silly reify   '/Users/gdavris/motify-next/node_modules/lightningcss-linux-arm-gnueabihf'
+70 silly reify ]
+71 silly reify mark retired [
+71 silly reify   '/Users/gdavris/motify-next/node_modules/lightningcss-linux-arm64-gnu'
+71 silly reify ]
+72 silly reify mark retired [
+72 silly reify   '/Users/gdavris/motify-next/node_modules/lightningcss-android-arm64'
+72 silly reify ]
+73 silly reify mark retired [
+73 silly reify   '/Users/gdavris/motify-next/node_modules/lightningcss-linux-x64-gnu'
+73 silly reify ]
+74 silly reify mark retired [
+74 silly reify   '/Users/gdavris/motify-next/node_modules/lightningcss-linux-arm64-musl'
+74 silly reify ]
+75 silly reify mark retired [
+75 silly reify   '/Users/gdavris/motify-next/node_modules/lightningcss-win32-arm64-msvc'
+75 silly reify ]
+76 silly reify mark retired [
+76 silly reify   '/Users/gdavris/motify-next/node_modules/lightningcss-linux-x64-musl'
+76 silly reify ]
+77 silly reify mark retired [
+77 silly reify   '/Users/gdavris/motify-next/node_modules/lightningcss-win32-x64-msvc'
+77 silly reify ]
+78 silly reify mark retired [ '/Users/gdavris/motify-next/node_modules/next' ]
+79 silly reify mark retired [ '/Users/gdavris/motify-next/node_modules/optimism' ]
+80 silly reify mark retired [ '/Users/gdavris/motify-next/node_modules/rehackt' ]
+81 silly reify mark retired [ '/Users/gdavris/motify-next/node_modules/symbol-observable' ]
+82 silly reify mark retired [ '/Users/gdavris/motify-next/node_modules/ts-invariant' ]
+83 silly reify mark retired [ '/Users/gdavris/motify-next/node_modules/zen-observable' ]
+84 silly reify mark retired [ '/Users/gdavris/motify-next/node_modules/zen-observable-ts' ]
+85 silly reify mark retired [ '/Users/gdavris/motify-next/node_modules/@apollo/client' ]
+86 silly reify mark retired [
+86 silly reify   '/Users/gdavris/motify-next/node_modules/@graphql-typed-document-node/core'
+86 silly reify ]
+87 silly reify mark retired [ '/Users/gdavris/motify-next/node_modules/@img/sharp-darwin-x64' ]
+88 silly reify mark retired [
+88 silly reify   '/Users/gdavris/motify-next/node_modules/@img/sharp-libvips-darwin-x64'
+88 silly reify ]
+89 silly reify mark retired [
+89 silly reify   '/Users/gdavris/motify-next/node_modules/@img/sharp-libvips-linux-arm'
+89 silly reify ]
+90 silly reify mark retired [
+90 silly reify   '/Users/gdavris/motify-next/node_modules/@img/sharp-libvips-linux-arm64'
+90 silly reify ]
+91 silly reify mark retired [
+91 silly reify   '/Users/gdavris/motify-next/node_modules/@img/sharp-libvips-linux-ppc64'
+91 silly reify ]
+92 silly reify mark retired [
+92 silly reify   '/Users/gdavris/motify-next/node_modules/@img/sharp-libvips-linux-riscv64'
+92 silly reify ]
+93 silly reify mark retired [
+93 silly reify   '/Users/gdavris/motify-next/node_modules/@img/sharp-libvips-linux-s390x'
+93 silly reify ]
+94 silly reify mark retired [
+94 silly reify   '/Users/gdavris/motify-next/node_modules/@img/sharp-libvips-linuxmusl-arm64'
+94 silly reify ]
+95 silly reify mark retired [
+95 silly reify   '/Users/gdavris/motify-next/node_modules/@img/sharp-libvips-linuxmusl-x64'
+95 silly reify ]
+96 silly reify mark retired [
+96 silly reify   '/Users/gdavris/motify-next/node_modules/@img/sharp-libvips-linux-x64'
+96 silly reify ]
+97 silly reify mark retired [ '/Users/gdavris/motify-next/node_modules/@img/sharp-linux-arm64' ]
+98 silly reify mark retired [ '/Users/gdavris/motify-next/node_modules/@img/sharp-linux-arm' ]
+99 silly reify mark retired [ '/Users/gdavris/motify-next/node_modules/@img/sharp-linux-ppc64' ]
+100 silly reify mark retired [ '/Users/gdavris/motify-next/node_modules/@img/sharp-linux-riscv64' ]
+101 silly reify mark retired [ '/Users/gdavris/motify-next/node_modules/@img/sharp-linux-s390x' ]
+102 silly reify mark retired [ '/Users/gdavris/motify-next/node_modules/@img/sharp-linux-x64' ]
+103 silly reify mark retired [
+103 silly reify   '/Users/gdavris/motify-next/node_modules/@img/sharp-linuxmusl-arm64'
+103 silly reify ]
+104 silly reify mark retired [ '/Users/gdavris/motify-next/node_modules/@img/sharp-linuxmusl-x64' ]
+105 silly reify mark retired [ '/Users/gdavris/motify-next/node_modules/@img/sharp-wasm32' ]
+106 silly reify mark retired [ '/Users/gdavris/motify-next/node_modules/@img/sharp-win32-arm64' ]
+107 silly reify mark retired [ '/Users/gdavris/motify-next/node_modules/@img/sharp-win32-x64' ]
+108 silly reify mark retired [ '/Users/gdavris/motify-next/node_modules/@img/sharp-win32-ia32' ]
+109 silly reify mark retired [ '/Users/gdavris/motify-next/node_modules/@next/env' ]
+110 silly reify mark retired [ '/Users/gdavris/motify-next/node_modules/@next/eslint-plugin-next' ]
+111 silly reify mark retired [ '/Users/gdavris/motify-next/node_modules/@next/swc-darwin-arm64' ]
+112 silly reify mark retired [ '/Users/gdavris/motify-next/node_modules/@next/swc-darwin-x64' ]
+113 silly reify mark retired [ '/Users/gdavris/motify-next/node_modules/@next/swc-linux-arm64-gnu' ]
+114 silly reify mark retired [
+114 silly reify   '/Users/gdavris/motify-next/node_modules/@next/swc-linux-arm64-musl'
+114 silly reify ]
+115 silly reify mark retired [ '/Users/gdavris/motify-next/node_modules/@next/swc-linux-x64-gnu' ]
+116 silly reify mark retired [ '/Users/gdavris/motify-next/node_modules/@next/swc-linux-x64-musl' ]
+117 silly reify mark retired [ '/Users/gdavris/motify-next/node_modules/@next/swc-win32-x64-msvc' ]
+118 silly reify mark retired [
+118 silly reify   '/Users/gdavris/motify-next/node_modules/@next/swc-win32-arm64-msvc'
+118 silly reify ]
+119 silly reify mark retired [
+119 silly reify   '/Users/gdavris/motify-next/node_modules/@tailwindcss/oxide-android-arm64'
+119 silly reify ]
+120 silly reify mark retired [
+120 silly reify   '/Users/gdavris/motify-next/node_modules/@tailwindcss/oxide-darwin-x64'
+120 silly reify ]
+121 silly reify mark retired [
+121 silly reify   '/Users/gdavris/motify-next/node_modules/@tailwindcss/oxide-freebsd-x64'
+121 silly reify ]
+122 silly reify mark retired [
+122 silly reify   '/Users/gdavris/motify-next/node_modules/@tailwindcss/oxide-linux-arm-gnueabihf'
+122 silly reify ]
+123 silly reify mark retired [
+123 silly reify   '/Users/gdavris/motify-next/node_modules/@tailwindcss/oxide-linux-arm64-gnu'
+123 silly reify ]
+124 silly reify mark retired [
+124 silly reify   '/Users/gdavris/motify-next/node_modules/@tailwindcss/oxide-linux-arm64-musl'
+124 silly reify ]
+125 silly reify mark retired [
+125 silly reify   '/Users/gdavris/motify-next/node_modules/@tailwindcss/oxide-linux-x64-gnu'
+125 silly reify ]
+126 silly reify mark retired [
+126 silly reify   '/Users/gdavris/motify-next/node_modules/@tailwindcss/oxide-linux-x64-musl'
+126 silly reify ]
+127 silly reify mark retired [
+127 silly reify   '/Users/gdavris/motify-next/node_modules/@tailwindcss/oxide-wasm32-wasi'
+127 silly reify ]
+128 silly reify mark retired [
+128 silly reify   '/Users/gdavris/motify-next/node_modules/@tailwindcss/oxide-win32-arm64-msvc'
+128 silly reify ]
+129 silly reify mark retired [
+129 silly reify   '/Users/gdavris/motify-next/node_modules/@tailwindcss/oxide-win32-x64-msvc'
+129 silly reify ]
+130 silly reify mark retired [
+130 silly reify   '/Users/gdavris/motify-next/node_modules/@unrs/resolver-binding-android-arm-eabi'
+130 silly reify ]
+131 silly reify mark retired [
+131 silly reify   '/Users/gdavris/motify-next/node_modules/@unrs/resolver-binding-android-arm64'
+131 silly reify ]
+132 silly reify mark retired [
+132 silly reify   '/Users/gdavris/motify-next/node_modules/@unrs/resolver-binding-freebsd-x64'
+132 silly reify ]
+133 silly reify mark retired [
+133 silly reify   '/Users/gdavris/motify-next/node_modules/@unrs/resolver-binding-darwin-x64'
+133 silly reify ]
+134 silly reify mark retired [
+134 silly reify   '/Users/gdavris/motify-next/node_modules/@unrs/resolver-binding-linux-arm-gnueabihf'
+134 silly reify ]
+135 silly reify mark retired [
+135 silly reify   '/Users/gdavris/motify-next/node_modules/@unrs/resolver-binding-linux-arm-musleabihf'
+135 silly reify ]
+136 silly reify mark retired [
+136 silly reify   '/Users/gdavris/motify-next/node_modules/@unrs/resolver-binding-linux-arm64-gnu'
+136 silly reify ]
+137 silly reify mark retired [
+137 silly reify   '/Users/gdavris/motify-next/node_modules/@unrs/resolver-binding-linux-arm64-musl'
+137 silly reify ]
+138 silly reify mark retired [
+138 silly reify   '/Users/gdavris/motify-next/node_modules/@unrs/resolver-binding-linux-ppc64-gnu'
+138 silly reify ]
+139 silly reify mark retired [
+139 silly reify   '/Users/gdavris/motify-next/node_modules/@unrs/resolver-binding-linux-riscv64-musl'
+139 silly reify ]
+140 silly reify mark retired [
+140 silly reify   '/Users/gdavris/motify-next/node_modules/@unrs/resolver-binding-linux-riscv64-gnu'
+140 silly reify ]
+141 silly reify mark retired [
+141 silly reify   '/Users/gdavris/motify-next/node_modules/@unrs/resolver-binding-linux-s390x-gnu'
+141 silly reify ]
+142 silly reify mark retired [
+142 silly reify   '/Users/gdavris/motify-next/node_modules/@unrs/resolver-binding-linux-x64-gnu'
+142 silly reify ]
+143 silly reify mark retired [
+143 silly reify   '/Users/gdavris/motify-next/node_modules/@unrs/resolver-binding-linux-x64-musl'
+143 silly reify ]
+144 silly reify mark retired [
+144 silly reify   '/Users/gdavris/motify-next/node_modules/@unrs/resolver-binding-wasm32-wasi'
+144 silly reify ]
+145 silly reify mark retired [
+145 silly reify   '/Users/gdavris/motify-next/node_modules/@unrs/resolver-binding-win32-arm64-msvc'
+145 silly reify ]
+146 silly reify mark retired [ '/Users/gdavris/motify-next/node_modules/@wry/caches' ]
+147 silly reify mark retired [ '/Users/gdavris/motify-next/node_modules/@wry/context' ]
+148 silly reify mark retired [
+148 silly reify   '/Users/gdavris/motify-next/node_modules/@unrs/resolver-binding-win32-ia32-msvc'
+148 silly reify ]
+149 silly reify mark retired [
+149 silly reify   '/Users/gdavris/motify-next/node_modules/@unrs/resolver-binding-win32-x64-msvc'
+149 silly reify ]
+150 silly reify mark retired [ '/Users/gdavris/motify-next/node_modules/@wry/equality' ]
+151 silly reify mark retired [ '/Users/gdavris/motify-next/node_modules/@wry/trie' ]
+152 silly reify moves {
+152 silly reify   '/Users/gdavris/motify-next/node_modules/eslint-config-next': '/Users/gdavris/motify-next/node_modules/.eslint-config-next-yO6LpilE',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/fastq': '/Users/gdavris/motify-next/node_modules/.fastq-1mHHKqBQ',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/graphql': '/Users/gdavris/motify-next/node_modules/.graphql-wI3ghF7a',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/graphql-tag': '/Users/gdavris/motify-next/node_modules/.graphql-tag-ur2unvak',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/hoist-non-react-statics': '/Users/gdavris/motify-next/node_modules/.hoist-non-react-statics-UVsmRO8A',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/lightningcss-darwin-x64': '/Users/gdavris/motify-next/node_modules/.lightningcss-darwin-x64-PqY8GaMy',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/lightningcss-freebsd-x64': '/Users/gdavris/motify-next/node_modules/.lightningcss-freebsd-x64-4uPzzJDP',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/lightningcss-linux-arm-gnueabihf': '/Users/gdavris/motify-next/node_modules/.lightningcss-linux-arm-gnueabihf-4ilFedIT',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/lightningcss-linux-arm64-gnu': '/Users/gdavris/motify-next/node_modules/.lightningcss-linux-arm64-gnu-VReEwFsj',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/lightningcss-android-arm64': '/Users/gdavris/motify-next/node_modules/.lightningcss-android-arm64-VJVuLABE',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/lightningcss-linux-x64-gnu': '/Users/gdavris/motify-next/node_modules/.lightningcss-linux-x64-gnu-fA46fP7S',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/lightningcss-linux-arm64-musl': '/Users/gdavris/motify-next/node_modules/.lightningcss-linux-arm64-musl-ek5eAhjj',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/lightningcss-win32-arm64-msvc': '/Users/gdavris/motify-next/node_modules/.lightningcss-win32-arm64-msvc-P2hPlcyO',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/lightningcss-linux-x64-musl': '/Users/gdavris/motify-next/node_modules/.lightningcss-linux-x64-musl-fE5dZF2c',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/lightningcss-win32-x64-msvc': '/Users/gdavris/motify-next/node_modules/.lightningcss-win32-x64-msvc-4hzgR0j4',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/next': '/Users/gdavris/motify-next/node_modules/.next-Xi9sU4Cu',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/optimism': '/Users/gdavris/motify-next/node_modules/.optimism-o7aD21ne',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/rehackt': '/Users/gdavris/motify-next/node_modules/.rehackt-YKhdhXjW',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/symbol-observable': '/Users/gdavris/motify-next/node_modules/.symbol-observable-HZ5KxGdu',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/ts-invariant': '/Users/gdavris/motify-next/node_modules/.ts-invariant-gqdAVlqh',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/zen-observable': '/Users/gdavris/motify-next/node_modules/.zen-observable-pdT9oLBr',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/zen-observable-ts': '/Users/gdavris/motify-next/node_modules/.zen-observable-ts-6luda22C',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/@apollo/client': '/Users/gdavris/motify-next/node_modules/@apollo/.client-umVPpUhF',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/@graphql-typed-document-node/core': '/Users/gdavris/motify-next/node_modules/@graphql-typed-document-node/.core-HsQwPbz1',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/@img/sharp-darwin-x64': '/Users/gdavris/motify-next/node_modules/@img/.sharp-darwin-x64-ekepEyAl',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/@img/sharp-libvips-darwin-x64': '/Users/gdavris/motify-next/node_modules/@img/.sharp-libvips-darwin-x64-4Umltvd5',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/@img/sharp-libvips-linux-arm': '/Users/gdavris/motify-next/node_modules/@img/.sharp-libvips-linux-arm-H4BmTmto',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/@img/sharp-libvips-linux-arm64': '/Users/gdavris/motify-next/node_modules/@img/.sharp-libvips-linux-arm64-gq3LHEay',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/@img/sharp-libvips-linux-ppc64': '/Users/gdavris/motify-next/node_modules/@img/.sharp-libvips-linux-ppc64-bTwkkDOg',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/@img/sharp-libvips-linux-riscv64': '/Users/gdavris/motify-next/node_modules/@img/.sharp-libvips-linux-riscv64-JGH1CZCc',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/@img/sharp-libvips-linux-s390x': '/Users/gdavris/motify-next/node_modules/@img/.sharp-libvips-linux-s390x-JilgPNR1',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/@img/sharp-libvips-linuxmusl-arm64': '/Users/gdavris/motify-next/node_modules/@img/.sharp-libvips-linuxmusl-arm64-SlSI5DXn',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/@img/sharp-libvips-linuxmusl-x64': '/Users/gdavris/motify-next/node_modules/@img/.sharp-libvips-linuxmusl-x64-esor8I78',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/@img/sharp-libvips-linux-x64': '/Users/gdavris/motify-next/node_modules/@img/.sharp-libvips-linux-x64-ZFPEtRiY',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/@img/sharp-linux-arm64': '/Users/gdavris/motify-next/node_modules/@img/.sharp-linux-arm64-WZFh869U',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/@img/sharp-linux-arm': '/Users/gdavris/motify-next/node_modules/@img/.sharp-linux-arm-2RRtswSD',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/@img/sharp-linux-ppc64': '/Users/gdavris/motify-next/node_modules/@img/.sharp-linux-ppc64-sYbZDpDM',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/@img/sharp-linux-riscv64': '/Users/gdavris/motify-next/node_modules/@img/.sharp-linux-riscv64-fdNB1HvW',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/@img/sharp-linux-s390x': '/Users/gdavris/motify-next/node_modules/@img/.sharp-linux-s390x-8nCLem8z',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/@img/sharp-linux-x64': '/Users/gdavris/motify-next/node_modules/@img/.sharp-linux-x64-EVUlUMIL',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/@img/sharp-linuxmusl-arm64': '/Users/gdavris/motify-next/node_modules/@img/.sharp-linuxmusl-arm64-AjCdaYIM',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/@img/sharp-linuxmusl-x64': '/Users/gdavris/motify-next/node_modules/@img/.sharp-linuxmusl-x64-i5s8WFb7',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/@img/sharp-wasm32': '/Users/gdavris/motify-next/node_modules/@img/.sharp-wasm32-u15IwNkL',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/@img/sharp-win32-arm64': '/Users/gdavris/motify-next/node_modules/@img/.sharp-win32-arm64-3oisTDO0',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/@img/sharp-win32-x64': '/Users/gdavris/motify-next/node_modules/@img/.sharp-win32-x64-uPgLtlRz',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/@img/sharp-win32-ia32': '/Users/gdavris/motify-next/node_modules/@img/.sharp-win32-ia32-DyLt5UqA',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/@next/env': '/Users/gdavris/motify-next/node_modules/@next/.env-uXt99Lrk',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/@next/eslint-plugin-next': '/Users/gdavris/motify-next/node_modules/@next/.eslint-plugin-next-m1N6Th1y',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/@next/swc-darwin-arm64': '/Users/gdavris/motify-next/node_modules/@next/.swc-darwin-arm64-w64S56yw',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/@next/swc-darwin-x64': '/Users/gdavris/motify-next/node_modules/@next/.swc-darwin-x64-Pj2NhDvJ',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/@next/swc-linux-arm64-gnu': '/Users/gdavris/motify-next/node_modules/@next/.swc-linux-arm64-gnu-JXM8waKX',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/@next/swc-linux-arm64-musl': '/Users/gdavris/motify-next/node_modules/@next/.swc-linux-arm64-musl-RzkDSG4O',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/@next/swc-linux-x64-gnu': '/Users/gdavris/motify-next/node_modules/@next/.swc-linux-x64-gnu-z85Pcyh7',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/@next/swc-linux-x64-musl': '/Users/gdavris/motify-next/node_modules/@next/.swc-linux-x64-musl-108JqKGI',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/@next/swc-win32-x64-msvc': '/Users/gdavris/motify-next/node_modules/@next/.swc-win32-x64-msvc-ADdhA5KB',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/@next/swc-win32-arm64-msvc': '/Users/gdavris/motify-next/node_modules/@next/.swc-win32-arm64-msvc-dQAXIFcD',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/@tailwindcss/oxide-android-arm64': '/Users/gdavris/motify-next/node_modules/@tailwindcss/.oxide-android-arm64-VtQp1jcd',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/@tailwindcss/oxide-darwin-x64': '/Users/gdavris/motify-next/node_modules/@tailwindcss/.oxide-darwin-x64-Wxr8uCxE',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/@tailwindcss/oxide-freebsd-x64': '/Users/gdavris/motify-next/node_modules/@tailwindcss/.oxide-freebsd-x64-qCWA73hi',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/@tailwindcss/oxide-linux-arm-gnueabihf': '/Users/gdavris/motify-next/node_modules/@tailwindcss/.oxide-linux-arm-gnueabihf-LcajSDmO',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/@tailwindcss/oxide-linux-arm64-gnu': '/Users/gdavris/motify-next/node_modules/@tailwindcss/.oxide-linux-arm64-gnu-cf7vgrun',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/@tailwindcss/oxide-linux-arm64-musl': '/Users/gdavris/motify-next/node_modules/@tailwindcss/.oxide-linux-arm64-musl-0wwADLsP',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/@tailwindcss/oxide-linux-x64-gnu': '/Users/gdavris/motify-next/node_modules/@tailwindcss/.oxide-linux-x64-gnu-ZGbNvlqc',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/@tailwindcss/oxide-linux-x64-musl': '/Users/gdavris/motify-next/node_modules/@tailwindcss/.oxide-linux-x64-musl-87iLR0Pw',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/@tailwindcss/oxide-wasm32-wasi': '/Users/gdavris/motify-next/node_modules/@tailwindcss/.oxide-wasm32-wasi-7kM729Sj',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/@tailwindcss/oxide-win32-arm64-msvc': '/Users/gdavris/motify-next/node_modules/@tailwindcss/.oxide-win32-arm64-msvc-86KBtmNK',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/@tailwindcss/oxide-win32-x64-msvc': '/Users/gdavris/motify-next/node_modules/@tailwindcss/.oxide-win32-x64-msvc-Ircw7U7S',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/@unrs/resolver-binding-android-arm-eabi': '/Users/gdavris/motify-next/node_modules/@unrs/.resolver-binding-android-arm-eabi-jmtjeP0n',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/@unrs/resolver-binding-android-arm64': '/Users/gdavris/motify-next/node_modules/@unrs/.resolver-binding-android-arm64-0uBsUXri',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/@unrs/resolver-binding-freebsd-x64': '/Users/gdavris/motify-next/node_modules/@unrs/.resolver-binding-freebsd-x64-kgIvu5pn',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/@unrs/resolver-binding-darwin-x64': '/Users/gdavris/motify-next/node_modules/@unrs/.resolver-binding-darwin-x64-VmRVaq8A',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/@unrs/resolver-binding-linux-arm-gnueabihf': '/Users/gdavris/motify-next/node_modules/@unrs/.resolver-binding-linux-arm-gnueabihf-2mRDr0h5',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/@unrs/resolver-binding-linux-arm-musleabihf': '/Users/gdavris/motify-next/node_modules/@unrs/.resolver-binding-linux-arm-musleabihf-L6PfTc6l',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/@unrs/resolver-binding-linux-arm64-gnu': '/Users/gdavris/motify-next/node_modules/@unrs/.resolver-binding-linux-arm64-gnu-QMFxTzFa',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/@unrs/resolver-binding-linux-arm64-musl': '/Users/gdavris/motify-next/node_modules/@unrs/.resolver-binding-linux-arm64-musl-aTrapKLr',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/@unrs/resolver-binding-linux-ppc64-gnu': '/Users/gdavris/motify-next/node_modules/@unrs/.resolver-binding-linux-ppc64-gnu-DCH3Ts5X',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/@unrs/resolver-binding-linux-riscv64-musl': '/Users/gdavris/motify-next/node_modules/@unrs/.resolver-binding-linux-riscv64-musl-QNp3P9U8',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/@unrs/resolver-binding-linux-riscv64-gnu': '/Users/gdavris/motify-next/node_modules/@unrs/.resolver-binding-linux-riscv64-gnu-1PfgLbtD',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/@unrs/resolver-binding-linux-s390x-gnu': '/Users/gdavris/motify-next/node_modules/@unrs/.resolver-binding-linux-s390x-gnu-As3tJh23',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/@unrs/resolver-binding-linux-x64-gnu': '/Users/gdavris/motify-next/node_modules/@unrs/.resolver-binding-linux-x64-gnu-sTFQxmsK',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/@unrs/resolver-binding-linux-x64-musl': '/Users/gdavris/motify-next/node_modules/@unrs/.resolver-binding-linux-x64-musl-sMjn27yV',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/@unrs/resolver-binding-wasm32-wasi': '/Users/gdavris/motify-next/node_modules/@unrs/.resolver-binding-wasm32-wasi-mlAO34gV',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/@unrs/resolver-binding-win32-arm64-msvc': '/Users/gdavris/motify-next/node_modules/@unrs/.resolver-binding-win32-arm64-msvc-Ey4JSWHl',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/@wry/caches': '/Users/gdavris/motify-next/node_modules/@wry/.caches-pWxpqFqv',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/@wry/context': '/Users/gdavris/motify-next/node_modules/@wry/.context-NJEaq4Cr',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/@unrs/resolver-binding-win32-ia32-msvc': '/Users/gdavris/motify-next/node_modules/@unrs/.resolver-binding-win32-ia32-msvc-4de8OYRB',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/@unrs/resolver-binding-win32-x64-msvc': '/Users/gdavris/motify-next/node_modules/@unrs/.resolver-binding-win32-x64-msvc-vfOAyKLP',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/@wry/equality': '/Users/gdavris/motify-next/node_modules/@wry/.equality-eVz8Wxmg',
+152 silly reify   '/Users/gdavris/motify-next/node_modules/@wry/trie': '/Users/gdavris/motify-next/node_modules/@wry/.trie-00tWLUig'
+152 silly reify }
+153 verbose stack Error: ENOTEMPTY: directory not empty, rename '/Users/gdavris/motify-next/node_modules/eslint-config-next' -> '/Users/gdavris/motify-next/node_modules/.eslint-config-next-yO6LpilE'
+153 verbose stack     at async Object.rename (node:internal/fs/promises:782:10)
+153 verbose stack     at async moveFile (/Users/gdavris/.nvm/versions/node/v20.19.5/lib/node_modules/npm/node_modules/@npmcli/fs/lib/move-file.js:30:5)
+153 verbose stack     at async Promise.allSettled (index 0)
+153 verbose stack     at async [reifyPackages] (/Users/gdavris/.nvm/versions/node/v20.19.5/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:325:11)
+153 verbose stack     at async Arborist.reify (/Users/gdavris/.nvm/versions/node/v20.19.5/lib/node_modules/npm/node_modules/@npmcli/arborist/lib/arborist/reify.js:142:5)
+153 verbose stack     at async Install.exec (/Users/gdavris/.nvm/versions/node/v20.19.5/lib/node_modules/npm/lib/commands/install.js:150:5)
+153 verbose stack     at async Npm.exec (/Users/gdavris/.nvm/versions/node/v20.19.5/lib/node_modules/npm/lib/npm.js:207:9)
+153 verbose stack     at async module.exports (/Users/gdavris/.nvm/versions/node/v20.19.5/lib/node_modules/npm/lib/cli/entry.js:74:5)
+154 error code ENOTEMPTY
+155 error syscall rename
+156 error path /Users/gdavris/motify-next/node_modules/eslint-config-next
+157 error dest /Users/gdavris/motify-next/node_modules/.eslint-config-next-yO6LpilE
+158 error errno -66
+159 error ENOTEMPTY: directory not empty, rename '/Users/gdavris/motify-next/node_modules/eslint-config-next' -> '/Users/gdavris/motify-next/node_modules/.eslint-config-next-yO6LpilE'
+160 silly unfinished npm timer reify 1766508399331
+161 silly unfinished npm timer reify:retireShallow 1766508403909
+162 verbose cwd /Users/gdavris/motify-next
+163 verbose os Darwin 25.1.0
+164 verbose node v20.19.5
+165 verbose npm  v10.8.2
+166 verbose exit -66
+167 verbose code -66
+168 error A complete log of this run can be found in: /Users/gdavris/motify-next/.npm-cache/_logs/2025-12-23T16_46_39_241Z-debug-0.log

@@ -1,0 +1,23 @@
+0 verbose cli /Users/gdavris/.nvm/versions/node/v20.19.5/bin/node /Users/gdavris/.nvm/versions/node/v20.19.5/bin/npm
+1 info using npm@10.8.2
+2 info using node@v20.19.5
+3 silly config load:file:/Users/gdavris/.nvm/versions/node/v20.19.5/lib/node_modules/npm/npmrc
+4 silly config load:file:/Users/gdavris/motify-next/.npmrc
+5 silly config load:file:/Users/gdavris/.npmrc
+6 silly config load:file:/Users/gdavris/.nvm/versions/node/v20.19.5/etc/npmrc
+7 verbose title npm install
+8 verbose argv "install" "--package-lock-only" "--cache" "./.npm-cache"
+9 verbose logfile logs-max:10 dir:/Users/gdavris/motify-next/.npm-cache/_logs/2025-12-23T16_41_43_139Z-
+10 verbose logfile /Users/gdavris/motify-next/.npm-cache/_logs/2025-12-23T16_41_43_139Z-debug-0.log
+11 silly packumentCache heap:4345298944 maxSize:1086324736 maxEntrySize:543162368
+12 silly logfile done cleaning log files
+13 silly idealTree buildDeps
+14 silly fetch manifest next@16.1.1
+15 silly packumentCache full:https://registry.npmjs.org/next cache-miss
+16 http fetch GET https://registry.npmjs.org/next attempt 1 failed with ENOTFOUND
+17 http fetch GET https://registry.npmjs.org/next attempt 2 failed with ENOTFOUND
+18 http fetch GET https://registry.npmjs.org/next attempt 3 failed with ENOTFOUND
+19 silly fetch manifest eslint-config-next@16.1.1
+20 silly packumentCache full:https://registry.npmjs.org/eslint-config-next cache-miss
+21 http fetch GET https://registry.npmjs.org/eslint-config-next attempt 1 failed with ENOTFOUND
+22 http fetch GET https://registry.npmjs.org/eslint-config-next attempt 2 failed with ENOTFOUND
