@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import Script from "next/script";
 import { AppProviders } from "@/app/providers";
 import { LayoutClient } from "@/components/LayoutClient";
 import { defaultLocale, locales, type Locale } from "@/lib/locales";
@@ -185,6 +186,32 @@ export default async function RootLayout({
       data-scroll-behavior="smooth"
     >
       <body className="font-sans bg-background text-foreground antialiased">
+        <Script
+          src="https://cdn.cookie-script.com/s/f53ea69c0dc794bea173034f53310869.js"
+          strategy="beforeInteractive"
+        />
+        <Script id="consent-default" strategy="beforeInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+
+            gtag('consent', 'default', {
+              analytics_storage: 'denied',
+              ad_storage: 'denied',
+              ad_user_data: 'denied',
+              ad_personalization: 'denied'
+            });
+          `}
+        </Script>
+        <Script id="gtm-base" strategy="afterInteractive">
+          {`
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-5BNLBB47');
+          `}
+        </Script>
         <AppProviders>
           <LayoutClient
             header={header}
