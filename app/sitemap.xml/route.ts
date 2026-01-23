@@ -1,3 +1,4 @@
+import { headers } from "next/headers";
 import { getBaseUrl } from "@/lib/structured-data";
 import { defaultLocale, locales, type Locale } from "@/lib/locales";
 import {
@@ -7,8 +8,6 @@ import {
   getBlogPageSlugsCached,
   getSitemapCategoriesByLocaleCached,
 } from "@/lib/wp-cached-queries";
-
-const baseUrl = getBaseUrl();
 
 const localesList = [...locales] as Locale[];
 
@@ -55,10 +54,12 @@ const buildBlogPath = (locale: Locale, blogSlug: string) => {
 };
 
 const buildLanguageAlternates = ({
+  baseUrl,
   locale,
   path,
   translationPath,
 }: {
+  baseUrl: string;
   locale: Locale;
   path: string;
   translationPath?: string | null;
@@ -74,6 +75,16 @@ const buildLanguageAlternates = ({
     locale === defaultLocale ? path : translationPath || path
   }`;
   return languages;
+};
+
+const getBaseUrlFromRequest = async () => {
+  if (process.env.NEXT_PUBLIC_SITE_URL) {
+    return getBaseUrl();
+  }
+  const requestHeaders = await headers();
+  const host = requestHeaders.get("x-forwarded-host") ?? requestHeaders.get("host");
+  const proto = requestHeaders.get("x-forwarded-proto") ?? "https";
+  return host ? `${proto}://${host}` : getBaseUrl();
 };
 
 const resolveBlogSlugByLocale = (
@@ -170,6 +181,7 @@ const toXml = (entries: SitemapEntry[]) => {
 
 export async function GET() {
   const now = new Date();
+  const baseUrl = await getBaseUrlFromRequest();
   const pagesByLocale = Object.fromEntries(
     await Promise.all(
       localesList.map(async (locale) => [locale, await getAllPagesByLocaleCached(locale)] as const)
@@ -198,7 +210,7 @@ export async function GET() {
         lastModified: page.modified ? new Date(page.modified) : now,
         priority: getPriority(path),
         alternates: {
-          languages: buildLanguageAlternates({ locale, path, translationPath }),
+          languages: buildLanguageAlternates({ baseUrl, locale, path, translationPath }),
         },
       };
     });
@@ -222,6 +234,7 @@ export async function GET() {
             priority: getPriority(blogPath),
             alternates: {
               languages: buildLanguageAlternates({
+                baseUrl,
                 locale,
                 path: blogPath,
                 translationPath: translationBlogPath,
@@ -242,7 +255,7 @@ export async function GET() {
               lastModified: now,
               priority: getPriority(path),
               alternates: {
-                languages: buildLanguageAlternates({ locale, path, translationPath }),
+                languages: buildLanguageAlternates({ baseUrl, locale, path, translationPath }),
               },
             };
           }),
@@ -260,7 +273,7 @@ export async function GET() {
               lastModified: post.modified ? new Date(post.modified) : now,
               priority: getPriority(path),
               alternates: {
-                languages: buildLanguageAlternates({ locale, path, translationPath }),
+                languages: buildLanguageAlternates({ baseUrl, locale, path, translationPath }),
               },
             };
           }),
@@ -286,7 +299,7 @@ export async function GET() {
             lastModified: project.modified ? new Date(project.modified) : now,
             priority: getPriority(path),
             alternates: {
-              languages: buildLanguageAlternates({ locale, path, translationPath }),
+              languages: buildLanguageAlternates({ baseUrl, locale, path, translationPath }),
             },
           };
         });
