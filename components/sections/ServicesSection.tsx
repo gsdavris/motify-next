@@ -55,6 +55,26 @@ export function ServicesSection({ section, locale }: ServicesSectionProps) {
           | "shield"
           | "zap") || "globe",
     })) ?? [];
+  const count = items.length;
+  const mdCols = count <= 1 ? "md:grid-cols-1" : "md:grid-cols-2";
+  const lgCols = count <= 1 ? "lg:grid-cols-1" : "lg:grid-cols-4";
+  const getSpanClasses = (index: number) => {
+    if (count === 1) return "lg:col-span-4";
+    if (count === 2) return "lg:col-span-2";
+    if (count === 3) return index === 0 ? "lg:col-span-2" : "lg:col-span-2";
+    if (count === 4) return index === 0 ? "lg:col-span-2" : "lg:col-span-2";
+    if (count === 5) {
+      if (index === 0) return "lg:col-span-2";
+      if (index === 4) return "lg:col-span-2";
+      return "lg:col-span-1";
+    }
+    if (count === 6) {
+      if (index === 0) return "lg:col-span-2";
+      if (index === 3) return "lg:col-span-2";
+      return "lg:col-span-1";
+    }
+    return "lg:col-span-1";
+  };
 
   const ctaLabel = section.cta?.label || t.services_view_all || "Explore All Services";
   const ctaHref = localizeHref(section.cta?.path?.uri || "/what-we-do", locale);
@@ -75,13 +95,13 @@ export function ServicesSection({ section, locale }: ServicesSectionProps) {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {items.map((service) => {
+        <div className={`grid grid-cols-1 gap-6 ${mdCols} ${lgCols}`}>
+          {items.map((service, idx) => {
             const Icon = iconMap[service.icon] ?? Globe;
             return (
             <div
               key={service.title}
-              className="group p-6 rounded-2xl bg-gradient-card border border-border/50 transition-all duration-300 hover:-translate-y-2 hover:border-primary/30 hover:shadow-glow"
+              className={`group p-6 rounded-2xl bg-gradient-card border border-border/50 transition-all duration-300 hover:-translate-y-2 hover:border-primary/30 hover:shadow-glow ${getSpanClasses(idx)}`}
             >
               <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
                 <Icon className="w-6 h-6 text-primary" />
