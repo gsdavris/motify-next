@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Globe, Palette, Smartphone, Sparkles, Users } from "lucide-react";
+import { Globe, Palette, Smartphone, Sparkles, Target, Shield, Zap, Users } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { localizeHref } from "@/lib/link-utils";
@@ -21,11 +21,18 @@ type ServicesSectionProps = {
   };
 };
 
-const iconMap: Record<"globe" | "smartphone" | "palette" | "users", typeof Globe> = {
+const iconMap: Record<
+  "globe" | "smartphone" | "palette" | "users" | "sparkles" | "target" | "shield" | "zap",
+  typeof Globe
+> = {
   globe: Globe,
   smartphone: Smartphone,
   palette: Palette,
   users: Users,
+  sparkles: Sparkles,
+  target: Target,
+  shield: Shield,
+  zap: Zap,
 };
 
 const stripTags = (value?: string | null) =>
@@ -37,7 +44,16 @@ export function ServicesSection({ section, locale }: ServicesSectionProps) {
     section.services?.map((svc) => ({
       title: svc.title || "",
       description: stripTags(svc.excerpt) || stripTags(svc.content) || "",
-      icon: (svc.serviceFields?.icon as "globe" | "smartphone" | "palette" | "users") || "globe",
+      icon:
+        (svc.serviceFields?.icon as
+          | "globe"
+          | "smartphone"
+          | "palette"
+          | "users"
+          | "sparkles"
+          | "target"
+          | "shield"
+          | "zap") || "globe",
     })) ?? [];
 
   const ctaLabel = section.cta?.label || t.services_view_all || "Explore All Services";
@@ -61,7 +77,7 @@ export function ServicesSection({ section, locale }: ServicesSectionProps) {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {items.map((service) => {
-            const Icon = iconMap[service.icon];
+            const Icon = iconMap[service.icon] ?? Globe;
             return (
             <div
               key={service.title}

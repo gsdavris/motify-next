@@ -1,4 +1,4 @@
-import { ArrowRight, Check, Globe, Palette, Smartphone, Users } from "lucide-react";
+import { ArrowRight, Check, Globe, Palette, Smartphone, Sparkles, Target, Shield, Zap, Users } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { RichText } from "@/components/ui/rich-text";
@@ -24,11 +24,18 @@ type ServicesDetailSectionProps = {
   onSelectService?: (serviceKey?: string) => void;
 };
 
-const iconMap: Record<"globe" | "smartphone" | "palette" | "users", typeof Globe> = {
+const iconMap: Record<
+  "globe" | "smartphone" | "palette" | "users" | "sparkles" | "target" | "shield" | "zap",
+  typeof Globe
+> = {
   globe: Globe,
   smartphone: Smartphone,
   palette: Palette,
   users: Users,
+  sparkles: Sparkles,
+  target: Target,
+  shield: Shield,
+  zap: Zap,
 };
 
 export function ServicesDetailSection({
@@ -39,7 +46,16 @@ export function ServicesDetailSection({
   const t = getTranslations(locale);
   const services =
     section.services?.map((svc) => ({
-      icon: (svc.serviceFields?.icon as "globe" | "smartphone" | "palette" | "users") || "globe",
+      icon:
+        (svc.serviceFields?.icon as
+          | "globe"
+          | "smartphone"
+          | "palette"
+          | "users"
+          | "sparkles"
+          | "target"
+          | "shield"
+          | "zap") || "globe",
       title: svc.title || "",
       description: svc.content || "",
       features:
@@ -60,7 +76,7 @@ export function ServicesDetailSection({
         <div className="space-y-24">
           {services.map((service, index) => {
             const reverse = index % 2 === 1;
-            const Icon = iconMap[service.icon];
+            const Icon = iconMap[service.icon] ?? Globe;
             const buttonLabel = ctaLabel ?? "Discuss This Service";
             const handleClick = onSelectService
               ? () => onSelectService?.(service.serviceKey)
