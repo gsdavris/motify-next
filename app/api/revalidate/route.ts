@@ -35,12 +35,18 @@ const resolveTags = (payload: RevalidatePayload): string[] => {
     case "page":
     case "pages":
       return [TAGS.pages, TAGS.metadata, TAGS.sitemap, TAGS.slugs];
+    case "service":
+    case "services":
+      return [TAGS.pages, TAGS.metadata, TAGS.sitemap, TAGS.slugs];
     case "menu":
     case "menus":
       return [TAGS.menus];
     case "category":
     case "categories":
       return [TAGS.posts, TAGS.sitemap, TAGS.slugs];
+    case "feature":
+    case "features":
+      return [TAGS.pages, TAGS.metadata, TAGS.sitemap, TAGS.slugs];
     case "settings":
     case "metadata":
       return [TAGS.metadata, TAGS.pages];
