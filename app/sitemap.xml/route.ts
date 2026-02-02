@@ -19,9 +19,10 @@ const prefixForLocale = (locale: Locale) => (locale === defaultLocale ? "" : `/$
 const getPriority = (path: string): number => {
   const normalized = stripLocalePrefix(path);
   if (normalized === "/") return 1.0;
-  if (normalized === "/news") return 0.9;
-  if (normalized.startsWith("/news/category/")) return 0.8;
-  if (normalized.startsWith("/news/")) return 0.7;
+  if (normalized === "/news" || normalized === "/nea") return 0.9;
+  if (normalized.startsWith("/news/category/") || normalized.startsWith("/nea/category/"))
+    return 0.8;
+  if (normalized.startsWith("/news/") || normalized.startsWith("/nea/")) return 0.7;
   if (normalized === "/projects") return 0.9;
   if (normalized.startsWith("/projects/")) return 0.8;
   return 0.8;

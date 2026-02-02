@@ -53,6 +53,8 @@ export async function generateMetadata({
   }
 
   const blogBasePath = slugMaps.blogSlugs?.[locale];
+  const otherBlogBasePath =
+    slugMaps.blogSlugs?.[otherLocale] ?? (otherLocale === "el" ? "nea" : "news");
   if (!blogBasePath) {
     return {};
   }
@@ -63,7 +65,7 @@ export async function generateMetadata({
   const translatedSlug = slugMaps.categorySlugMap?.[locale]?.[category.slug];
   if (translatedSlug) {
     alternateLinks[otherLocale] = localizeHref(
-      `/${blogBasePath}/category/${translatedSlug}`,
+      `/${(otherBlogBasePath ?? blogBasePath)}/category/${translatedSlug}`,
       otherLocale
     );
   }

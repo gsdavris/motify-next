@@ -35,6 +35,8 @@ export async function generateMetadata({
   ]);
 
   const blogSlug = slugMaps.blogSlugs?.[locale];
+  const otherBlogSlug =
+    slugMaps.blogSlugs?.[otherLocale] ?? (otherLocale === "el" ? "nea" : "news");
   const slugFromOtherLocale = slugMaps.postSlugMap?.[otherLocale]?.[slug];
   const resolvedSlug = slugFromOtherLocale ?? slug;
 
@@ -52,7 +54,7 @@ export async function generateMetadata({
   };
   if (translationSlug) {
     alternateLinks[otherLocale] = localizeHref(
-      `/${blogSlug ?? ""}/${translationSlug}`,
+      `/${(otherBlogSlug ?? blogSlug) ?? ""}/${translationSlug}`,
       otherLocale
     );
   }

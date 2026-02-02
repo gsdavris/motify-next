@@ -45,7 +45,7 @@ export const getBlogBasePath = (
 ) => {
   const normalized = blogBasePath?.replace(/^\/+|\/+$/g, "");
   if (normalized) return normalized;
-  return locale === defaultLocale ? "news" : "news";
+  return locale === "el" ? "nea" : "news";
 };
 
 export function buildPostPath(

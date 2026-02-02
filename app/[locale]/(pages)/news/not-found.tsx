@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useTranslations } from "@/hooks/useTranslations";
-import { localizeHref } from "@/lib/link-utils";
+import { buildBlogIndexPath } from "@/lib/link-utils";
 
 export default function NotFound() {
   const { t, locale } = useTranslations();
@@ -17,7 +17,7 @@ export default function NotFound() {
           {t.news_not_found_body ?? t.not_found_body ?? "Article not found"}
         </p>
         <Link
-          href={localizeHref("/news", locale)}
+          href={buildBlogIndexPath(locale)}
           className="text-primary underline underline-offset-4 hover:text-primary/90"
         >
           {t.news_not_found_cta ?? t.not_found_cta ?? "Back to Blog"}
