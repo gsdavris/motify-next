@@ -150,6 +150,7 @@ export function ContactSection({ locale, contact }: ContactSectionProps) {
             }}
             companyLabel={t.contact_label_company}
             projectTypes={[
+              { value: "website", label: t.contact_option_website },
               { value: "web_app", label: t.contact_option_web_app },
               { value: "mobile_app", label: t.contact_option_mobile_app },
               { value: "product_design", label: t.contact_option_product_design },

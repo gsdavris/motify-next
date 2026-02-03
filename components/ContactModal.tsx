@@ -67,6 +67,7 @@ function ContactModal() {
   const privacyPolicyHref = localizeHref(t.privacy_policy_path || "/privacy-policy", locale);
   const privacyPolicyLabel = t.privacy_policy_label || "Privacy Policy";
   const projectTypes = [
+    { value: "website", label: t.contact_option_website },
     { value: "web-app", label: t.contact_option_web_app },
     { value: "mobile-app", label: t.contact_option_mobile_app },
     { value: "product-design", label: t.contact_option_product_design },
