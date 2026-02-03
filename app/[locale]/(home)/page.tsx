@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const wpMetadata = homePageId
     ? await getPageMetadataByIdCached(homePageId)
     : homeSlug
-      ? await getPageMetadataBySlugCached(homeSlug)
+      ? await getPageMetadataBySlugCached(homeSlug, locale)
       : null;
   return buildPageMetadata({
     seo: wpMetadata?.seo ?? null,

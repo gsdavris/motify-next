@@ -44,7 +44,7 @@ export async function generateMetadata({
   const wpMetadata = blogPageId
     ? await getPageMetadataByIdCached(blogPageId)
     : blogPageSlug
-      ? await getPageMetadataBySlugCached(blogPageSlug)
+      ? await getPageMetadataBySlugCached(blogPageSlug, locale)
       : null;
 
   const canonicalPath = blogPageSlug

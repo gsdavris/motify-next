@@ -1,6 +1,7 @@
 import { gql } from "@apollo/client";
 
 import { fetchWpGraphql } from "@/apollo/client";
+import { defaultLocale, type Locale } from "@/lib/locales";
 
 const PAGE_METADATA_QUERY = gql`
   query PageMetadata($slug: ID!, $idType: PageIdType = URI) {
@@ -69,14 +70,32 @@ const toUri = (slug: string) => {
   return slug.startsWith("/") ? slug : `/${slug}`;
 };
 
-export async function getPageMetadataBySlug(slug: string): Promise<WpPageMetadata | null> {
+export async function getPageMetadataBySlug(
+  slug: string,
+  locale: Locale
+): Promise<WpPageMetadata | null> {
   const uri = toUri(slug);
+  const localizedUri =
+    locale === defaultLocale
+      ? uri
+      : uri === "/"
+        ? `/${locale}`
+        : `/${locale}${uri}`;
 
   try {
     const data = await fetchWpGraphql<{ page?: WpPageMetadata | null }>({
       query: PAGE_METADATA_QUERY,
-      variables: { slug: uri },
+      variables: { slug: localizedUri },
     });
+
+    if (!data?.page && localizedUri !== uri) {
+      const fallback = await fetchWpGraphql<{ page?: WpPageMetadata | null }>({
+        query: PAGE_METADATA_QUERY,
+        variables: { slug: uri },
+      });
+      if (!fallback?.page) return null;
+      return fallback.page;
+    }
 
     if (!data?.page) return null;
     return data.page;

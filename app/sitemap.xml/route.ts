@@ -16,6 +16,21 @@ const stripLocalePrefix = (path: string) =>
 
 const prefixForLocale = (locale: Locale) => (locale === defaultLocale ? "" : `/${locale}`);
 
+const normalizeUri = (uri?: string | null) => {
+  if (!uri) return null;
+  const trimmed = uri.replace(/\/+$/, "");
+  return trimmed || "/";
+};
+
+const isUriForLocale = (uri: string | null | undefined, locale: Locale) => {
+  const normalized = normalizeUri(uri);
+  if (!normalized) return true;
+  if (locale === defaultLocale) {
+    return !normalized.startsWith(`/${locales.find((loc) => loc !== defaultLocale)}/`);
+  }
+  return normalized === `/${locale}` || normalized.startsWith(`/${locale}/`);
+};
+
 const getPriority = (path: string): number => {
   const normalized = stripLocalePrefix(path);
   if (normalized === "/") return 1.0;
@@ -197,7 +212,9 @@ export async function GET() {
   }, {} as Record<Locale, string>);
 
   const siteEntries: SitemapEntry[] = localesList.flatMap((locale) => {
-    const pages = pagesByLocale[locale] ?? [];
+    const pages = (pagesByLocale[locale] ?? []).filter((page) =>
+      isUriForLocale(page.uri, locale)
+    );
     return pages.map((page) => {
       const path = buildPagePath({ slug: page.slug, uri: page.uri, locale });
       const translationPath = page.translation?.slug

@@ -1,7 +1,7 @@
 import { gql } from "@apollo/client";
 
 import { fetchWpGraphql } from "@/apollo/client";
-import { type Locale } from "@/lib/locales";
+import { defaultLocale, type Locale } from "@/lib/locales";
 import PageContentFragment from "@/apollo/queries/fragments/pages/pageContent/PageContentFragment";
 
 const PAGE_QUERY = gql`
@@ -66,6 +66,12 @@ const toUri = (slug: string) => {
 
 export async function getPageBySlug(slug: string, locale: Locale): Promise<WpPage | null> {
   const uri = toUri(slug);
+  const localizedUri =
+    locale === defaultLocale
+      ? uri
+      : uri === "/"
+        ? `/${locale}`
+        : `/${locale}${uri}`;
 
   try {
     const data = await fetchWpGraphql<{
@@ -78,10 +84,38 @@ export async function getPageBySlug(slug: string, locale: Locale): Promise<WpPag
         featuredImage?: { node?: { sourceUrl: string; altText?: string | null; title?: string | null } | null };
         pageContent?: unknown;
       } | null;
-    }>({
-      query: PAGE_QUERY,
-      variables: { slug: uri },
-    });
+    }>({ query: PAGE_QUERY, variables: { slug: localizedUri } });
+
+    if (!data?.page && localizedUri !== uri) {
+      const fallback = await fetchWpGraphql<{
+        page?: {
+          id: string;
+          databaseId: number;
+          slug: string;
+          title: string;
+          content?: string | null;
+          featuredImage?: { node?: { sourceUrl: string; altText?: string | null; title?: string | null } | null };
+          pageContent?: unknown;
+        } | null;
+      }>({ query: PAGE_QUERY, variables: { slug: uri } });
+      if (!fallback?.page) return null;
+      const img = fallback.page.featuredImage?.node;
+      return {
+        id: fallback.page.id,
+        databaseId: fallback.page.databaseId,
+        slug: fallback.page.slug,
+        title: fallback.page.title,
+        content: fallback.page.content ?? null,
+        featuredImage: img
+          ? {
+              sourceUrl: img.sourceUrl,
+              altText: img.altText ?? null,
+              title: img.title ?? null,
+            }
+          : null,
+        pageContent: fallback.page.pageContent ?? null,
+      };
+    }
 
     if (!data?.page) return null;
 
