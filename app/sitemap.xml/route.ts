@@ -22,6 +22,8 @@ const normalizeUri = (uri?: string | null) => {
   return trimmed || "/";
 };
 
+const hasGreekChars = (value: string) => /[\u0370-\u03FF\u1F00-\u1FFF]/.test(value);
+
 const isUriForLocale = (uri: string | null | undefined, locale: Locale) => {
   const normalized = normalizeUri(uri);
   if (!normalized) return true;
@@ -117,6 +119,7 @@ const resolveBlogSlugByLocale = (
       "nea",
   } as Record<Locale, string>;
 };
+
 
 type SitemapEntry = {
   url: string;
@@ -244,6 +247,8 @@ export async function GET() {
           ? buildBlogPath(locale === "el" ? "en" : "el", translationBlogSlug)
           : undefined;
         const categories = await getSitemapCategoriesByLocaleCached(locale);
+        const filteredCategories =
+          locale === "en" ? categories.filter((category) => !hasGreekChars(category.slug)) : categories;
         const posts = await getAllPostsByLocaleCached(locale);
         return [
           {
@@ -259,7 +264,7 @@ export async function GET() {
               }),
             },
           },
-          ...categories.map((category) => {
+          ...filteredCategories.map((category) => {
           const prefix = prefixForLocale(locale);
           const path = `${prefix}/${blogSlug}/category/${category.slug}`;
           const otherLocale = locale === "el" ? "en" : "el";
